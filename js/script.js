@@ -1,5 +1,7 @@
 // UI logic
 
+let shoutIterations = 0;
+
 function getAndSetMadLibValues() {
   const person1Input = document.getElementById("person1Input").value;
   const person2Input = document.getElementById("person2Input").value;
@@ -21,7 +23,9 @@ function getAndSetMadLibValues() {
 
 function getAndSetShoutMachineValues() {
   const shoutInput = document.getElementById("shoutInput").value;
+  shoutIterations++;
 
+  document.querySelector("span#shout").style.fontSize = 2 * shoutIterations + "em";
   document.querySelector("span#shout").innerText = shoutInput;
 }
 
