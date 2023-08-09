@@ -19,13 +19,25 @@ function getAndSetMadLibValues() {
   document.querySelector("span#exclamation").innerText = exclamationInput;
 }
 
+function getAndSetShoutMachineValues() {
+  const shoutInput = document.getElementById("shoutInput").value;
+
+  document.querySelector("span#shout").innerText = shoutInput;
+}
+
 // create onsubmit handler
 function setFormSubmissionEventHandler() {
-  let form = document.querySelector("form");
-  form.onsubmit = function(event) {
+  let form1 = document.querySelector("#form1");
+  let form2 = document.querySelector("#form2");
+  form1.onsubmit = function(event) {
     event.preventDefault();
     getAndSetMadLibValues();
     document.querySelector("div#story").removeAttribute("class");
+  }
+  form2.onsubmit = function(event) {
+    event.preventDefault();
+    getAndSetShoutMachineValues();
+    document.querySelector("div#shouter").removeAttribute("class");
   }
 }
 
