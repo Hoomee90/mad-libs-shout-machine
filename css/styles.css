@@ -1,3 +1,7 @@
 .hidden {
   display: none;
 }
+
+#shouter {
+  font-weight: bold;
+}
